@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Chp 01: Objects</title>
+</head>
+<body>
+	
+</body>
+<script type="text/javascript">
+	
+	// Question:
+
+	// 1. Create an object with student info in it using two types to create it.
+
+	// First Way: Object Literal
+	var student = {
+		name: 'Parvez Shaikh',
+		age: 27,
+		school: 'KHS'
+	}
+
+	console.log(student);
+
+	// Second Way: Constructor
+	var students = new Object();
+	students.name = 'Parvez Shaikh';
+	students.age = 27;
+	students.school = 'KHS';
+
+	console.log(students);
+
+	// 2. Shows different ways to access object properties.
+	var books = {
+		title: 'Harry Potter',
+		pages: 280,
+		bookMark: 'Page no: 20'
+	}
+
+	console.log(books.title);
+	console.log(books.pages);
+
+	// 3. Show different own and inherited properties in object.
+	// own: defined by users
+	// inherited: by Object's prototype
+	var school = {
+		schoolName: 'KHS',
+		schoolAccr: true,
+		schoolLocation: 'Bandra'
+	}
+
+	console.log("schoolName" in school);
+
+
+	console.log("schoolType" in school);
+
+
+	console.log("toString" in school);
+
+	// 4. Show patterns to create objects.
+
+	// First Way
+	function fruit(color, sweetness, name, nativeToLand){
+		this.color = color;
+		this.sweetness = sweetness;
+		this.name = name;
+		this.nativeToLand = nativeToLand;
+		this.showName = function(){
+			console.log('Name of fruit is ', this.color);
+		}
+
+		this.nativeTo = function(){
+			this.nativeToLand.forEach(function(native){
+				console.log('Grown at: ', native)
+			});
+		}
+		
+	}
+
+	var mango = new fruit('yellow', 8, 'mango', ['INDIA', 'USA']);
+	mango.showName();
+	mango.nativeTo();
+
+	// Second Way
+	function Fruit(){
+
+	}
+
+	Fruit.prototype.color = "YELLOW";
+	Fruit.prototype.sweetness = 8;
+	Fruit.prototype.name = "MANGO";
+	Fruit.prototype.showName = function(){
+		console.log('Name of fruit is: ', this.name);
+	}
+
+	var mango = new Fruit();
+
+	mango.showName();
+
+
+
+</script>
+</html>
