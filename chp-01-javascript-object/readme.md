@@ -38,5 +38,31 @@ console.log(ageGroup["30"]); // Children​
 Objects can be used to store data or for creating custom methods and functions.
 ​
 
+### Creating Objects:
+
+There are two ways to do it
+	1. Object Literals(A JavaScript object literal is a comma-separated list of name-value pairs wrapped in curly braces)
+		// This is an empty object created using object literal
+		var myBooks = {};
+
+		// This is an object with four items
+		var mango = {
+			color: 'yellow',
+			shape: 'round',
+			sweetness: 8,
+			howSweetAmI: function(){
+				console.log('Hmm Good')
+			}
+		}
+
+	2. Object Constructor(used to initialize new objects)
+		var mango = new Object();
+		mango.color = 'Yellow';
+		mango.shape = 'Round';
+		mango.sweetness = 8;
+		mango.howSweetAmI = function(){
+			console.log('Hmm, Good')
+		}
+
 
 
