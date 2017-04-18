@@ -1,4 +1,4 @@
-# Chp 01: JavaScript's Object
+# Chp 02: JavaScript's Variable Scope and Hoisting
 
 Variable Scope:
 It is a context in which the variable exists.
